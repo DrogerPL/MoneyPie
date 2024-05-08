@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/id_top_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/id_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#6A0DAD"
+            android:text="Napis w lewym górnym rogu"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:layout_below="@+id/id_top_section"
+        android:layout_above="@+id/id_bottom_section"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/id_list_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice"
+            android:dividerHeight="1dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_bottom_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/id_edit_text"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:hint="Name"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/buttonadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addItemToList"
+            android:text="Add"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#000000"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/id_edit_text2"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:hint="Amount"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/buttonback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goBack"
+            android:text="Back" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
